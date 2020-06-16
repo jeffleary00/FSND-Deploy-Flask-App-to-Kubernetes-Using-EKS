@@ -1,2 +1,0 @@
-JWT_SECRET=ssh_super_secret_dont_tell_anyone
-LOG_LEVEL=DEBUG

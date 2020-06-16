@@ -4,7 +4,7 @@ eks cluster name: "simple-jwt-api"
 
 
 Create an EKS Cluster and IAM Role
-==================================
+===================================
 > eksctl create cluster -t t3.micro --name simple-jwt-api
 > ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
 > TRUST="{ \"Version\": \"2012-10-17\", \"Statement\": [ { \"Effect\": \"Allow\", \"Principal\": { \"AWS\": \"arn:aws:iam::${ACCOUNT_ID}:root\" }, \"Action\": \"sts:AssumeRole\" } ] }"
@@ -14,3 +14,15 @@ Create an EKS Cluster and IAM Role
 > kubectl get -n kube-system configmap/aws-auth -o yaml > /tmp/aws-auth-patch.yml
 > kubectl patch configmap/aws-auth -n kube-system --patch "$(cat /tmp/aws-auth-patch.yml)"
 > aws ssm put-parameter --name JWT_SECRET --value "ssh_super_secret_dont_tell_anyone" --type SecureString
+
+
+ROLE ARN:
+arn:aws:iam::309910208838:role/UdacityFlaskDeployCBKubectlRole
+
+
+shell:$ eksctl get cluster
+NAME		REGION
+simple-jwt-api	us-east-1
+
+shell:$ kubectl get services simple-jwt-api -o wide
+Error from server (NotFound): services "simple-jwt-api" not found
