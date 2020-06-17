@@ -26,3 +26,6 @@ simple-jwt-api	us-east-1
 
 shell:$ kubectl get services simple-jwt-api -o wide
 Error from server (NotFound): services "simple-jwt-api" not found
+
+# address for public interface
+af6271b778c774c83b4bfca94d9d8859-1391591347.us-east-1.elb.amazonaws.com
