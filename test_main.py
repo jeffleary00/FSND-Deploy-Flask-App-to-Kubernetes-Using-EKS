@@ -27,6 +27,10 @@ def test_health(client):
     assert response.status_code == 200
     assert response.json == 'Healthy'
 
+    # BOGUS assert! This proves that the test fail CodePipeline, and will
+    # not allow it to go to production!
+    assert False
+
 def test_auth(client):
     body = {'email': EMAIL,
             'password': PASSWORD}
