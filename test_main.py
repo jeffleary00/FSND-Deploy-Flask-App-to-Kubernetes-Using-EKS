@@ -29,7 +29,7 @@ def test_health(client):
 
     # BOGUS assert! This proves that the test fail CodePipeline, and will
     # not allow it to go to production!
-    assert False
+    # assert False
 
 def test_auth(client):
     body = {'email': EMAIL,
