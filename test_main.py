@@ -1,6 +1,7 @@
 '''
 Tests for jwt flask app.
 '''
+
 import os
 import json
 import pytest
@@ -20,14 +21,12 @@ def client():
 
     yield client
 
+
 def test_health(client):
     response = client.get('/')
     assert response.status_code == 200
     assert response.json == 'Healthy'
 
-    # BOGUS assert! This proves that the test fail CodePipeline, and will
-    # not allow it to go to production!
-    # assert False
 
 def test_auth(client):
     body = {'email': EMAIL,
