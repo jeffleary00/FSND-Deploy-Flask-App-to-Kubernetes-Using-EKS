@@ -41,3 +41,6 @@ af6271b778c774c83b4bfca94d9d8859-1391591347.us-east-1.elb.amazonaws.com
 
 3. Docker image not found.
    https://knowledge.udacity.com/questions/212287
+
+4. Kube error with groups. Instruction in course are wrong
+   https://knowledge.udacity.com/questions/73448
