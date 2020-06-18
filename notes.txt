@@ -31,8 +31,13 @@ Error from server (NotFound): services "simple-jwt-api" not found
 af6271b778c774c83b4bfca94d9d8859-1391591347.us-east-1.elb.amazonaws.com
 
 # FAILURES
-During codepipeline tests.
-See other students issues here: https://knowledge.udacity.com/questions/75031
+1. Switched to different kube/aws image.
+   See accepted answer here: https://knowledge.udacity.com/questions/75031
 
-To get around this, I rewrote the test_main.py tests so that they will pass
-with "python3 test_main.py", instead of using pytest.
+2. pytest test failutes.
+   Pytest seems to be using python2, and is missing modules in python3.
+   To get around this, I rewrote the test_main.py tests using unittest, so that
+   they will pass with "python3 test_main.py", instead of using pytest.
+
+3. Docker image not found.
+   https://knowledge.udacity.com/questions/212287
