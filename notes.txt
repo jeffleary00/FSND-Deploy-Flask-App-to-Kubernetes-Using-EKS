@@ -29,3 +29,10 @@ Error from server (NotFound): services "simple-jwt-api" not found
 
 # address for public interface
 af6271b778c774c83b4bfca94d9d8859-1391591347.us-east-1.elb.amazonaws.com
+
+# FAILURES
+During codepipeline tests.
+See other students issues here: https://knowledge.udacity.com/questions/75031
+
+To get around this, I rewrote the test_main.py tests so that they will pass
+with "python3 test_main.py", instead of using pytest.
